@@ -12,6 +12,6 @@ export class AppController {
 
   @Get('name')
   getName(@Query('name') name: string): string {
-    return `Hello ? ${name}`;
+    return `Hello? ${name}`;
   }
 }
