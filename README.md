@@ -1,36 +1,8 @@
-# NestJS Board API
+# NestJS Notice Board Project
 
-**NestJS 기반 게시판 API 프로젝트**  
-NestJS의 기본 구조와 개념(Module, Controller, Service, DI 등)을 학습하고,  
-CRUD 게시판 API를 구현하며 실무에서 자주 사용하는 기능들을 적용한 토이 프로젝트입니다.
+## 프로젝트 구조
 
----
-
-## 주요 기능
-
-- 게시글 CRUD (생성, 조회, 수정, 삭제)
-- DTO를 통한 데이터 유효성 검증 (Validation)
-- Custom Decorator 활용
-- 예외 처리 (Exception Filters)
-- 로깅 처리 (Logger Module)
-- 환경 변수 관리 (Config Module)
-- Swagger를 이용한 API 문서화
-
----
-
-## 기술 스택
-
-- **Framework**: NestJS (Node.js 기반)
-- **Language**: TypeScript
-- **Database**: PostgreSQL / MySQL / MongoDB / Supabase / Firebase Firestore ( 중 선택 예정 nosql써보고 싶음)
-- **ORM / SDK**: TypeORM / Prisma / Firebase SDK 등
-- **Docs**: Swagger
-
----
-
-## 프로젝트 구조 (예시)
-
-````bash
+```
 nestjs-board/
 ├── src/
 │   ├── boards/              # 게시판 모듈
@@ -45,19 +17,24 @@ nestjs-board/
 ├── test/
 ├── package.json
 └── tsconfig.json
+```
 
+## 시작하기
 
-
-# NestJS CLI 설치 (처음 1회)
+### NestJS CLI 설치 (처음 1회)
+```bash
 pnpm add -g @nestjs/cli
+```
 
-# 의존성 설치
+### 의존성 설치
+```bash
 pnpm install
+```
 
-# 개발 서버 실행
+### 개발 서버 실행
+```bash
 pnpm start:dev
-
-
+```
 
 ---
 
@@ -74,9 +51,7 @@ pnpm start:dev
 Postman 대신 VSCode의 [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) 확장 프로그램을 사용하여 API를 테스트합니다.
 프로젝트 루트의 `.http` 파일을 통해 API 요청을 관리하고 실행할 수 있습니다.
 
-![RestClient Screenshot](public/img/RestClient.png)
-
----
+![RestClient Screenshot](./public/img/RestClient.png)
 
 ---
 
@@ -102,8 +77,6 @@ Postman 대신 VSCode의 [REST Client](https://marketplace.visualstudio.com/item
   - CI/CD (GitHub Actions, 프로덕션 인프라)
 
 ---
-
-
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
@@ -132,13 +105,13 @@ Postman 대신 VSCode의 [REST Client](https://marketplace.visualstudio.com/item
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
+## Installation
 
 ```bash
 $ pnpm install
-````
+```
 
-## Compile and run the project
+## Running the app
 
 ```bash
 # development
@@ -151,7 +124,7 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
-## Run tests
+## Test
 
 ```bash
 # unit tests
@@ -164,42 +137,16 @@ $ pnpm run test:e2e
 $ pnpm run test:cov
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Nest is [MIT licensed](LICENSE).
