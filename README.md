@@ -69,6 +69,15 @@ pnpm start:dev
 
 ---
 
+## API 테스트 (RestClient)
+
+Postman 대신 VSCode의 [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) 확장 프로그램을 사용하여 API를 테스트합니다.
+프로젝트 루트의 `.http` 파일을 통해 API 요청을 관리하고 실행할 수 있습니다.
+
+![RestClient Screenshot](public/img/RestClient.png)
+
+---
+
 ---
 
 ## 향후 개선 방향
