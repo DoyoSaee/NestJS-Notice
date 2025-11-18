@@ -3,14 +3,13 @@
 ## 프로젝트 구조
 
 ```
-nestjs-board/
+nestjs-notice/
 ├── src/
-│   ├── boards/              # 게시판 모듈
-│   │   ├── boards.controller.ts
-│   │   ├── boards.service.ts
-│   │   ├── boards.module.ts
-│   │   ├── dto/             # DTO 정의
-│   │   └── entities/        # 엔티티 정의
+│   ├── board/               # 게시판 모듈
+│   │   ├── board.controller.ts
+│   │   ├── board.service.ts
+│   │   ├── board.module.ts
+│   │   └── dto/               # DTO 정의
 │   ├── common/              # 공통 모듈 (logger, filters, decorators 등)
 │   ├── app.module.ts
 │   └── main.ts
@@ -43,9 +42,13 @@ pnpm start:dev
 
 ## API 문서 (Swagger)
 
-서버 실행 후 브라우저에서 확인:
+서버 실행 후 브라우저에서 API 문서를 확인하고 직접 테스트해볼 수 있습니다.
+
+각 API에 대한 상세 설명과 요청/응답 스키마는 Swagger 페이지에 자세히 명시되어 있습니다.
 
 [http://localhost:3000/api](http://localhost:3000/api)
+
+![Swagger UI Screenshot](./public/img/swagger.png)
 
 ---
 

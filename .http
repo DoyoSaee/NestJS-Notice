@@ -1,1 +1,37 @@
+//Rest Client
+
+# 전체 조회
 GET http://localhost:3000/board
+
+###
+
+# 단건 조회
+GET http://localhost:3000/board/1
+
+###
+
+# 수정
+PUT http://localhost:3000/board/1
+Content-Type: application/json
+
+{
+    "id": 11,
+    "title": "title11",
+    "name": "name11"
+}
+
+###
+
+# 삭제
+DELETE http://localhost:3000/board/1
+
+
+###
+# 생성
+POST http://localhost:3000/board
+Content-Type: application/json
+
+{
+    "title": "title신규",
+    "name": "name신규"
+}
