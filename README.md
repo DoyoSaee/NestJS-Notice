@@ -14,7 +14,7 @@ nestjs-board/
 │   ├── common/              # 공통 모듈 (logger, filters, decorators 등)
 │   ├── app.module.ts
 │   └── main.ts
-├── test/
+├── test/jest/               # 테스트
 ├── package.json
 └── tsconfig.json
 ```
@@ -22,16 +22,19 @@ nestjs-board/
 ## 시작하기
 
 ### NestJS CLI 설치 (처음 1회)
+
 ```bash
 pnpm add -g @nestjs/cli
 ```
 
 ### 의존성 설치
+
 ```bash
 pnpm install
 ```
 
 ### 개발 서버 실행
+
 ```bash
 pnpm start:dev
 ```
@@ -56,6 +59,7 @@ Postman 대신 VSCode의 [REST Client](https://marketplace.visualstudio.com/item
 ---
 
 ## 향후 개선 방향
+
 - **데이터베이스 연동**
   - TypeORM + PostgreSQL 적용
   - Entity/관계/마이그레이션/시딩 기능 추가
