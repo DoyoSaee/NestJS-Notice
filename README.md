@@ -61,6 +61,15 @@ Postman 대신 VSCode의 [REST Client](https://marketplace.visualstudio.com/item
 
 ---
 
+## 유효성 검사 (Validation)
+
+이 프로젝트는 `class-validator`와 `class-transformer` 라이브러리를 사용하여 API 요청의 데이터 전송 객체(DTO)에 대한 유효성 검사를 수행합니다. 이를 통해 컨트롤러 로직이 실행되기 전에 데이터의 무결성을 보장하고 애플리케이션의 안정성을 높입니다.
+
+- **`class-validator`**: `@IsNotEmpty()`, `@MinLength()`, `@MaxLength()` 등 다양한 데코레이터를 사용하여 DTO 필드의 유효성 규칙을 간단하게 정의할 수 있습니다.
+- **`class-transformer`**: `ValidationPipe`와 함께 사용되어 들어오는 요청의 payload를 DTO 클래스의 인스턴스로 자동 변환합니다.
+
+---
+
 ## 향후 개선 방향
 
 - **데이터베이스 연동**
