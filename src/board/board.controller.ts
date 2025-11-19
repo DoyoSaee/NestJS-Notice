@@ -4,8 +4,10 @@ import {
   Delete,
   Get,
   Param,
+  ParseIntPipe,
   Post,
   Put,
+  ValidationPipe,
 } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { BoardService } from './board.service';
@@ -34,7 +36,7 @@ export class BoardController {
   })
   @ApiResponse({ status: 200, description: '성공' })
   @ApiResponse({ status: 404, description: '게시글을 찾을 수 없음' })
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id', ParseIntPipe) id: string) {
     return this.boardService.findOne(+id);
   }
 
@@ -57,7 +59,10 @@ export class BoardController {
   })
   @ApiResponse({ status: 200, description: '성공' })
   @ApiResponse({ status: 404, description: '게시글을 찾을 수 없음' })
-  update(@Param('id') id: string, @Body() body: UpdateBoardDto) {
+  update(
+    @Param('id') id: string,
+    @Body(new ValidationPipe()) body: UpdateBoardDto,
+  ) {
     return this.boardService.update(+id, body);
   }
 

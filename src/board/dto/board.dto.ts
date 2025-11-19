@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, MaxLength, MinLength } from 'class-validator';
+import { IsNotEmpty, IsOptional, MaxLength, MinLength } from 'class-validator';
 
 export class CreateBoardDto {
   @MinLength(2)
@@ -16,6 +16,10 @@ export class CreateBoardDto {
 }
 
 export class UpdateBoardDto {
+  @IsOptional()
+  @MinLength(2)
+  @IsNotEmpty() // 빈 문자열을 허용하지 않으려면 추가
+  @MaxLength(20)
   @ApiProperty({
     description: '수정할 게시글 제목',
     example: '수정된 게시글 제목',
@@ -23,6 +27,9 @@ export class UpdateBoardDto {
   })
   title?: string;
 
+  @IsOptional()
+  @MinLength(2)
+  @MaxLength(20)
   @ApiProperty({
     description: '수정할 작성자 이름',
     example: '김철수',
